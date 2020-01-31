@@ -1,3 +1,15 @@
+![](https://www.mouthmedia.com/images/logo.png)
+
+#Major Framework Update 2020
+
+## Overview
+* Rewritten for Gulp 4
+* `gulp link` deprecated, just grab files from 'node_modules'. 
+
+## Coming
+* PurgeCSS implimentation
+* Modern Browser reset
+
 ## Installation
 Run `npm i`
 

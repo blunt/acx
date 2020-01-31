@@ -10,6 +10,7 @@ const cache = require('gulp-cache');
 const cssnano = require("cssnano");
 const del = require('del');
 const gulpif = require('gulp-if');
+const npmDist = require('gulp-npm-dist');
 const imagemin = require('gulp-imagemin');
 const postcss = require("gulp-postcss");
 const purgecss = require("gulp-purgecss");
@@ -60,6 +61,11 @@ function fonts() {
         .pipe(gulp.dest('dist/fonts'))
 }
 
+function scriptLink() {
+    return gulp.src(npmDist(), {base:'./node_modules'})
+    .pipe(gulp.dest('./src/js/scripts'));
+}
+
 function images() {
     return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(cache(imagemin({
@@ -88,6 +94,8 @@ exports.sassy = sassy;
 exports.watch = watch;
 exports.purge = purge;
 exports.compile = compile;
+exports.scriptLink = scriptLink;
 
-exports.default = gulp.series(sassy, watch);
-exports.build = gulp.series(clean, sassy, compile, images, fonts);
+exports.default = gulp.series(scriptLink, sassy, watch);
+exports.link = gulp.series(scriptLink);
+exports.build = gulp.series(clean, scriptLink, sassy, compile, images, fonts);

@@ -61,8 +61,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -287,8 +286,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -323,8 +321,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -411,8 +408,7 @@ template {
    Base styles: opinionated defaults
    ========================================================================== */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 html {
   color: #222;
@@ -478,7 +474,6 @@ p:last-child, ul:last-child, ol:last-child, h1:last-child, h2:last-child, h3:las
 .radios label,
 .checkboxs label {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 /* -----------------------------------------------------------------
@@ -566,7 +561,6 @@ a {
   color: #00e;
   text-decoration: none;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s; }
   a:hover {
     color: #00006f; }
@@ -624,7 +618,6 @@ textarea {
   background: #fff;
   margin: 0 0 10px;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s; }
   input:focus,
   textarea:focus {
@@ -644,7 +637,6 @@ select {
 .radios label,
 .checkboxs label {
   -webkit-box-align: start;
-      -ms-flex-align: start;
           align-items: flex-start;
   padding: 0; }
 
@@ -660,16 +652,21 @@ input.button {
   width: auto; }
 
 .button {
-  display: inline-block;
-  padding: 12px 20px;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  height: 40px;
+  padding: 0 20px;
   background: #00e;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  border-radius: 5px;
+  border-radius: 0;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s; }
   .button:hover {
     color: #fff;

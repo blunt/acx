@@ -4,7 +4,7 @@
 
 ## Overview
 * Rewritten for Gulp 4
-* `gulp link` deprecated, just grab files from 'node_modules'. 
+* `gulp link` deprecated, just link files in from node_modules
 
 ## Coming
 * PurgeCSS implimentation

@@ -1,0 +1,37 @@
+nav.main {
+    .trigger {
+        cursor: pointer;
+        @include breakpoint (tablet-wide) {
+            display: none;
+        }
+        i {
+            margin-right: 5px;
+        }
+    }
+    & > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        & > li {
+            & > i {
+
+            }
+            & > a {
+
+            }
+        }
+    }
+    .dropdown {
+        display: none;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                a {
+
+                }
+            }
+        }
+    }
+}

@@ -1,15 +1,18 @@
 // ------------------------------------------------------------------
-// BUTTON OPTIONS
+// BUTTONS
 // ------------------------------------------------------------------
 .button {
-    display: inline-block;
-	padding: 12px 20px;
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	padding: 0 20px;
 	background: $link-color;
 	color: $white;
 	font-family: $sans;
 	font-size: 14px;
     line-height: 1.2;
-	border-radius: 5px;
+	border-radius: 0;
     @include transition;
 	&:hover {
         color: $white;

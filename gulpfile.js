@@ -12,7 +12,7 @@ const del = require('del');
 const gulpif = require('gulp-if');
 const imagemin = require('gulp-imagemin');
 const postcss = require("gulp-postcss");
-const purgecss = require('gulp-purgecss');
+const purgecss = require("gulp-purgecss");
 const useref = require('gulp-useref');
 const sass = require('gulp-sass');
 const terser = require('gulp-terser');
@@ -31,7 +31,7 @@ var paths = {
 function sassy() {
     return gulp.src('./src/css/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([autoprefixer('last 4 versions')]))
+        .pipe(postcss([autoprefixer('defaults')]))
         .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream());
 }

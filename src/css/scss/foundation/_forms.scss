@@ -15,20 +15,48 @@ label {
 	}
 }
 
-input,
-textarea {
-	display: block;
+input:not([type="radio"]),
+input:not([type="checkbox"]),
+textarea,
+select {
+	display: flex;
+	align-items: center;
 	width: 100%;
-	padding: 10px;
+	height: 40px;
+	margin: 0;
+	padding: 0 10px;
+	color: $text-color;
+	background-color: $input-bkg;
 	border: 1px solid $input-border;
 	font-family: $font-family;
-	color: $text-color;
-	font-size: $text-size;
-	background: $input-bkg;
-	margin: 0 0 10px;
+	font-size: 16px;
+	font-weight: 300;
 	@include transition;
 	&:focus {
-		background: $input-focus;
+		background-color: $input-focus;
+	}
+	&.error {
+		border-color: 1px solid $error;
+	}
+	&::placeholder {
+		opacity: 1;
+		color: rgba(0,0,0,0.5);
+	}
+}
+
+textarea {
+	align-items: flex-start;
+	min-height: 200px;
+	padding: 15px 10px;
+}
+
+select {
+	width: 100%;
+	appearance: none;
+	border-radius: 0;
+	background: url('data:image/svg+xml;utf8,<svg height="50" width="100" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon fill="black" points="100,0 0,0 50,50"/></svg>') right 10px top 50% / 10px no-repeat $input-bkg;
+	&:invalid {
+		color: rgba(0,0,0,0.5);
 	}
 	&.error {
 		border: 1px solid $error;
@@ -39,18 +67,11 @@ input[type="text"], input[type="password"], input[type="file"], textarea, button
 	outline: none;
 }
 
-select {
-	width: 100%;
-	&.error {
-		border: 1px solid $error;
-	}
-}
-
-.radios,
-.checkboxs {
+.radio-wrap,
+.checkbox-wrap {
 	label {
-		@extend %flex;
 		@extend %flatten;
+		display: flex;
 		align-items: flex-start;
 		padding: 0;
 	}
@@ -60,9 +81,21 @@ select {
 	}
 }
 
-button.button,
-input.button {
-	border: none;
-	display: inline-block;
-	width: auto;
+.input-wrap {
+	margin-bottom: 20px;
+	&.error {
+		.error-flag {
+			display: block;
+		}
+	}
+}
+
+.error-flag {
+	display: none;
+	padding: 5px 10px;
+	background: $error;
+	color: $white;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
 }

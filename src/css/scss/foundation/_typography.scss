@@ -2,8 +2,9 @@
 // HEADINGS
 // ------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
-    margin: 40px 0 25px;
+    @extend %flatten;
+    margin: 40px 0 30px;
+	line-height: 1;
 }
 
 h1 {
@@ -36,6 +37,11 @@ h6 {
 ::-moz-selection { background: $link-color; color: $white; text-shadow: none; }
 ::selection { background: $link-color; color: $white; text-shadow: none; }
 
+p, ul, ol, blockquote, .iframe-wrap {
+	@extend %flatten;
+	margin: 30px 0;
+}
+
 a {
 	color: $link-color;
 	text-decoration: none;
@@ -43,6 +49,14 @@ a {
 	&:hover {
 		color: $link-hover-color;
 	}
+}
+
+strong {
+	font-weight: 700;
+}
+
+address {
+	font-style: normal;
 }
 
 blockquote {

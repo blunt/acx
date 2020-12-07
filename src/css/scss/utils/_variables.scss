@@ -7,6 +7,7 @@ $success: #62b51f;
 $warning: #e4be4c;
 $error: #c82727;
 $info: #5bc0de;
+$border: #ccc;
 
 // $facebook: #3b5998;
 // $twitter: #55acee;
@@ -45,5 +46,5 @@ $font-family: $sans;
 // FORMS
 // ------------------------------------------------------------------
 $input-bkg: $white;
-$input-border: lighten($black, 90%);
+$input-border: $border;
 $input-focus: lighten($black, 95%);

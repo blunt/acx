@@ -63,7 +63,7 @@ function fonts() {
 
 function scriptLink() {
     return gulp.src(npmDist(), {base:'./node_modules'})
-    .pipe(gulp.dest('./src/js/scripts'));
+        .pipe(gulp.dest('./src/js/scripts'));
 }
 
 function images() {

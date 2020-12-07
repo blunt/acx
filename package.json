@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "basic gulp framework | html development",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "author": "Jeff Cotton",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.13",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -20,12 +18,12 @@
     "gulp-npm-dist": "^1.0.3",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^1.2.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.2.0",
+    "gulp-terser": "^1.4.1",
     "gulp-useref": "^3.1.6"
   },
   "dependencies": {
-    
+    "@fortawesome/fontawesome-pro": "^5.12.0"
   }
 }

@@ -26,6 +26,6 @@
     "gulp-useref": "^3.1.6"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-pro": "^5.12.0"
+    
   }
 }

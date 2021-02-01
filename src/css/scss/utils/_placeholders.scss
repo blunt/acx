@@ -1,6 +1,6 @@
-// ------------------------------------------------------------------
-// PLACEHOLDERS
-// ------------------------------------------------------------------
+// ====================================
+// placeholders -----------------------
+
 %flatten {
     &:first-child {
 		margin-top: 0;
@@ -10,6 +10,19 @@
 	}
 }
 
-%flex {
-    display: flex;
+%wrapper {
+	max-width: calc(100% - 40px);
+    margin: 0 auto;
+    @include breakpoint (tablet) {
+        max-width: 600px;
+    }
+    @include breakpoint (tablet-wide) {
+        max-width: 900px;
+    }
+    @include breakpoint (desktop) {
+        max-width: 1200px;
+    }
+    @include breakpoint (desktop-wide) {
+        max-width: 1600px;
+    }
 }

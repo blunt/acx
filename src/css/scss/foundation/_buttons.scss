@@ -1,6 +1,6 @@
-// ------------------------------------------------------------------
-// BUTTONS
-// ------------------------------------------------------------------
+// ====================================
+// button -----------------------------
+
 .button {
     display: inline-flex;
 	align-items: center;
@@ -9,11 +9,11 @@
 	padding: 0 20px;
 	background: $link-color;
 	border: 0;
+	border-radius: 0;
 	color: $white;
 	font-family: $sans;
 	font-size: 14px;
     line-height: 1.2;
-	border-radius: 0;
     @include transition;
 	&:hover {
         color: $white;

@@ -2,38 +2,27 @@
 // navigation -------------------------
 
 nav.main {
-    .trigger {
-        cursor: pointer;
-        @include breakpoint (sm) {
-            display: none;
-        }
-        i {
-            margin-right: 5px;
-        }
-    }
-    & > ul {
+    ul { // General
         list-style: none;
         margin: 0;
         padding: 0;
-        & > li {
-            & > i {
-
-            }
-            & > a {
-
+        li {
+            position: relative;
+            a {
+                display: block;
             }
         }
     }
-    .dropdown {
-        display: none;
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li {
-                a {
+    & > ul { // Main
+        & > li {
+            & > a {
 
-                }
+            }
+            ul { // Dropdown General
+
+            }
+            & > ul { // Dropdown 1
+
             }
         }
     }

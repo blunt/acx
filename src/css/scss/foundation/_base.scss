@@ -1,17 +1,24 @@
 // ====================================
 // general ----------------------------
 
+* {
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
 html {
 	background: $body-color;
 	font-size: $text-size;
 	font-family: $font-family;
 	line-height: $line-height;
 	color: $text-color;
+	scroll-behavior: smooth;
 }
 
 body {	
 	background: $body-color;
 	overflow-x: hidden;
+	overscroll-behavior: none;
 }
 
 p, ul, ol, h1, h2, h3, h4, h5, h6, blockquote, .iframe-wrap {
@@ -51,13 +58,13 @@ p, ul, ol, h1, h2, h3, h4, h5, h6, blockquote, .iframe-wrap {
 	@extend %flatten;
 }
 .alignleft {
-	@include breakpoint (tablet) {
+	@include breakpoint (sm) {
 		float: left;
 		margin: 0 30px 30px 0;
 	}
 }
 .alignright {
-	@include breakpoint (tablet) {
+	@include breakpoint (sm) {
 		float: right;
 		margin: 0 0 30px 30px;
 	}

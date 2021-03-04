@@ -4,7 +4,7 @@
 nav.main {
     .trigger {
         cursor: pointer;
-        @include breakpoint (tablet-wide) {
+        @include breakpoint (sm) {
             display: none;
         }
         i {

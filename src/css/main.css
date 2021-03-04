@@ -357,31 +357,27 @@ p:last-child, ul:last-child, ol:last-child, h1:last-child, h2:last-child, h3:las
   margin-bottom: 0; }
 
 .wrapper {
-  max-width: calc(100% - 40px);
+  width: calc(100% - 10vw);
+  max-width: 1600px;
   margin: 0 auto; }
-  @media (min-width: 640px) {
-    .wrapper {
-      max-width: 600px; } }
-  @media (min-width: 940px) {
-    .wrapper {
-      max-width: 900px; } }
-  @media (min-width: 1240px) {
-    .wrapper {
-      max-width: 1200px; } }
-  @media (min-width: 1640px) {
-    .wrapper {
-      max-width: 1600px; } }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 html {
   background: #fff;
   font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  color: #444; }
+  color: #444;
+  scroll-behavior: smooth; }
 
 body {
   background: #fff;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none; }
 
 .clearfix:before,
 .clearfix:after {
@@ -592,7 +588,7 @@ input[type="text"], input[type="password"], input[type="file"], textarea, button
 
 nav.main .trigger {
   cursor: pointer; }
-  @media (min-width: 940px) {
+  @media (min-width: 640px) {
     nav.main .trigger {
       display: none; } }
   nav.main .trigger i {

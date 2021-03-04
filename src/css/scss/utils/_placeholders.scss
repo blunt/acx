@@ -11,18 +11,7 @@
 }
 
 %wrapper {
-	max-width: calc(100% - 40px);
+    width: calc(100% - 10vw);
+	max-width: 1600px;
     margin: 0 auto;
-    @include breakpoint (tablet) {
-        max-width: 600px;
-    }
-    @include breakpoint (tablet-wide) {
-        max-width: 900px;
-    }
-    @include breakpoint (desktop) {
-        max-width: 1200px;
-    }
-    @include breakpoint (desktop-wide) {
-        max-width: 1600px;
-    }
 }

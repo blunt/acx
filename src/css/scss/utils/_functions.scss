@@ -1,0 +1,17 @@
+// ====================================
+// colours -----------------------------
+
+// pale mix
+@function pale($color, $amount: 75%) {
+    @return mix(white, $color, $amount);
+}
+
+// light mix
+@function light($color, $amount: 10%) {
+    @return mix(white, $color, $amount);
+}
+
+// dark mix
+@function dark($color, $amount: 10%) {
+    @return mix(black, $color, $amount);
+}

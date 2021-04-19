@@ -15,7 +15,8 @@ const imagemin = require('gulp-imagemin');
 const postcss = require("gulp-postcss");
 const purgecss = require("gulp-purgecss");
 const useref = require('gulp-useref');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
+const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
 
 // PATHS
@@ -31,8 +32,10 @@ var paths = {
 
 function sassy() {
     return gulp.src('./src/css/scss/**/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([autoprefixer('defaults')]))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream());
 }

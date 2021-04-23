@@ -9,6 +9,15 @@ $error: #c82727;
 $info: #5bc0de;
 $border: #ccc;
 
+:root {
+    --black: #000000;
+
+    --ada-black: #000028;
+    --link-color: var(--black);
+    
+    --alpha: #5DFF77;
+}
+
 // $facebook: #3b5998;
 // $twitter: #55acee;
 // $youtube: #bb0000;
@@ -19,7 +28,7 @@ $border: #ccc;
 // ====================================
 // fonts ------------------------------
 
-$sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans: 'Roobert', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $serif: Georgia, Times, 'Times New Roman', serif;
 
 $line-height: 1.5;
@@ -30,10 +39,7 @@ $semi: 600;
 $bold: 700;
 
 $text-size: 16px;
-$text-color: #444;
-
-$link-color: #00e;
-$link-hover-color: darken($link-color, 25%);
+$text-color: var(--black);
 
 // ====================================
 // defaults ---------------------------

@@ -1,2 +1,153 @@
 // ====================================
 // global -----------------------------
+
+.rellax {
+    transition: all 250ms;
+}
+
+.hero {
+    @extend %wrapper;
+    position: relative;
+    padding: clamp(50px, 5vw, 100px) 0;
+    @include breakpoint (md) {
+        padding-top: 0;
+    }
+    .text {
+        position: relative;
+        z-index: 500;
+        @include breakpoint (md) {
+            position: absolute;
+            bottom: clamp(100px, 15vw, 275px);
+        }
+        h1 {
+            font-size: clamp(36px, 5vw, 78px);
+            span {
+                display: block;
+                opacity: 0;
+                transform: translateY(10%);
+                transition: all 400ms;
+                &.loaded {
+                    transform: translateY(0);
+                    opacity: 1;
+                    &:nth-of-type(1) {
+                        transition-delay: 200ms;
+                    }
+                    &:nth-of-type(2) {
+                        transition-delay: 400ms;
+                    }
+                    &:nth-of-type(3) {
+                        transition-delay: 600ms;
+                    }
+                }
+            }
+        }
+        .lower {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            margin-top: clamp(25px, 15vw, 225px);
+            @include breakpoint (md) {
+                flex-direction: row;
+                align-items: center;
+            }
+            .button {
+                margin-top: clamp(25px, 5vw, 50px);
+                @include breakpoint (md) {
+                    margin: 0 clamp(50px, 5vw, 110px) 0 0;
+                }
+            }
+            time {
+                font-size: clamp(28px, 5vw, 56px);
+            }
+        }
+    }
+    .image {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: -7vw;
+        width: min(40vw, 500px);
+        @include breakpoint (md) {
+            top: unset;
+            bottom: -1vw;
+        }
+        img {
+            border-radius: min(5vw, 70px);
+        }
+    }
+    .logo {
+        position: relative;
+        z-index: 250;
+        margin: clamp(-75px, -15vw, -50px) -5vw 0;
+        @include breakpoint (md) {
+            margin-top: 0;
+        }
+    }
+}
+
+.info-bar {
+    background: var(--alpha);
+    padding: clamp(50px, 10vw, 150px) 0;
+    .inner {
+        @extend %wrapper;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include breakpoint (md) {
+            align-items: center;
+        }
+        .image {
+            width: 30%;
+            margin: 0 5vw 0 -7vw;
+            flex-shrink: 0;
+            @include breakpoint (md) {
+                width: 48%;
+                margin: 0;
+            }
+            img {
+                border-radius: min(5vw, 70px);
+                overflow: hidden;
+                margin: 0 auto;
+                @include breakpoint (md) {
+                    width: 80%;
+                }
+            }
+        }
+        .text {
+            position: relative;
+            z-index: 250;
+            font-size: clamp(16px, 5vw, 34px);
+            line-height: 1.25;
+            @include breakpoint (md) {
+                width: 48%;
+            }
+            h1 {
+                margin-bottom: 60px;
+                font-size: clamp(28px, 7.5vw, 56px);
+            }
+        }
+    }
+}
+
+.soon-bar {
+    @extend %wrapper;
+    padding: clamp(50px, 10vw, 150px) 0;
+    h1 {
+        position: relative;
+        z-index: 500;
+        margin-bottom: clamp(30px, 10vw, 100px);
+        font-size: clamp(36px, 10vw, 78px);
+        font-weight: 400;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: var(--alpha);
+        font-size: clamp(36px, 10vw, 56px);
+        line-height: 1.2;
+        svg {
+            width: 56px;
+            margin: 10px 0 0 20px;
+        }
+    }
+}

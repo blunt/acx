@@ -1,8 +1,8 @@
 // ====================================
 // navigation -------------------------
 
-nav.main {
-    ul { // General
+nav {
+    ul {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -13,17 +13,83 @@ nav.main {
             }
         }
     }
+}
+
+nav.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    background: $white;
+    width: 100vw;
+    height: 100vh;
+    padding: 120px 1rem 0;
+    transform: translateY(-125%);
+    transition: all 250ms;
+    @include breakpoint (lg) {
+        position: relative;
+        top: unset;
+        left: unset;
+        background: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        transform: translateY(0);
+    }
+    &.visible {
+        transform: translateY(0);
+    }
     & > ul { // Main
+        @include breakpoint (lg) {
+            display: flex;
+            align-items: center;
+        }
         & > li {
+            margin-bottom: 20px;
+            @include breakpoint (lg) {
+                margin: 0 0 0 clamp(25px, 5vw, 50px);
+            }
+            &.cta {
+                @include breakpoint (lg) {
+                    margin-left: clamp(40px, 5vw, 80px);
+                }
+                a {
+                    @include breakpoint (lg) {
+                        display: inline-flex;
+                        flex-shrink: 0;
+                        align-items: center;
+                        justify-content: center;
+                        height: clamp(45px, 6vw, 90px);
+                        padding: 0 30px;
+                        border-radius: clamp(45px, 6vw, 90px);
+                        background: var(--link-color);
+                        color: $white;
+                        font-size: clamp(18px, 2.5vw, 30px);
+                        line-height: 1;
+                    }
+                }
+            }
             & > a {
-
+                font-size: 36px;
+                line-height: 1.2;
+                @include breakpoint (lg) {
+                    font-size: 30px;
+                }
+                &.current {
+                    text-decoration: underline;
+                    text-underline-offset: 0.5rem;
+                }
             }
-            ul { // Dropdown General
+        }
+    }
+}
 
-            }
-            & > ul { // Dropdown 1
-
-            }
+nav.footer {
+    ul {
+        display: flex;
+        li {
+            margin: 0 0 0 30px;
         }
     }
 }
